@@ -1,0 +1,54 @@
+version: "3.1"
+
+stories:
+
+- story: happy path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: happy path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: customer_support
+  - action: action_customer_support
+  - action: utter_confirmation
+  - intent: salesforce
+  - action: action_salesforce
+  - action: utter_confirmation
+  - intent: hr_scheduling
+  - action: action_hr_scheduling
+  - action: utter_confirmation
+
+- story: sad path - customer_support
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: customer_support
+  - action: action_customer_support
+  - action: utter_confirmation
+  - intent: goodbye
+  - action: utter_goodbye

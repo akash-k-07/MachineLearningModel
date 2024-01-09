@@ -1,0 +1,31 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+  
+- rule: respond to FAQs
+  steps:
+  - intent: customer_support
+  - action: action_customer_support
+  - action: utter_confirmation
+
+- rule: provide Salesforce information
+  steps:
+  - intent: salesforce
+  - action: action_salesforce
+  - action: utter_confirmation
+
+- rule: schedule HR meeting
+  steps:
+  - intent: hr_scheduling
+  - action: action_hr_scheduling
+  - action: utter_confirmation

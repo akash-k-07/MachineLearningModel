@@ -1,0 +1,14 @@
+[
+  {
+    "name": "service_type",
+    "pattern": "HR scheduling"
+  },
+  {
+    "name": "service_type",
+    "pattern": "Salesforce"
+  },
+  {
+    "name": "service_type",
+    "pattern": "customer support"
+  }
+]

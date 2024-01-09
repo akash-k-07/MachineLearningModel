@@ -1,0 +1,29 @@
+{
+  "lookup": {
+    "rules": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"goodbye\"}}]": "utter_goodbye",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"goodbye\"}}, {\"prev_action\": {\"action_name\": \"utter_goodbye\"}, \"user\": {\"intent\": \"goodbye\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}]": "utter_iamabot",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}, {\"prev_action\": {\"action_name\": \"utter_iamabot\"}, \"user\": {\"intent\": \"bot_challenge\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"hr_scheduling\"}}]": "action_hr_scheduling",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"hr_scheduling\"}}, {\"prev_action\": {\"action_name\": \"action_hr_scheduling\"}, \"user\": {\"intent\": \"hr_scheduling\"}}]": "utter_confirmation",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"hr_scheduling\"}}, {\"prev_action\": {\"action_name\": \"action_hr_scheduling\"}, \"user\": {\"intent\": \"hr_scheduling\"}}, {\"prev_action\": {\"action_name\": \"utter_confirmation\"}, \"user\": {\"intent\": \"hr_scheduling\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"customer_support\"}}]": "action_customer_support",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"customer_support\"}}, {\"prev_action\": {\"action_name\": \"action_customer_support\"}, \"user\": {\"intent\": \"customer_support\"}}]": "utter_confirmation",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"customer_support\"}}, {\"prev_action\": {\"action_name\": \"action_customer_support\"}, \"user\": {\"intent\": \"customer_support\"}}, {\"prev_action\": {\"action_name\": \"utter_confirmation\"}, \"user\": {\"intent\": \"customer_support\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"salesforce\"}}]": "action_salesforce",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"salesforce\"}}, {\"prev_action\": {\"action_name\": \"action_salesforce\"}, \"user\": {\"intent\": \"salesforce\"}}]": "utter_confirmation",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"salesforce\"}}, {\"prev_action\": {\"action_name\": \"action_salesforce\"}, \"user\": {\"intent\": \"salesforce\"}}, {\"prev_action\": {\"action_name\": \"utter_confirmation\"}, \"user\": {\"intent\": \"salesforce\"}}]": "action_listen"
+    },
+    "rule_only_slots": [],
+    "rule_only_loops": [],
+    "rules_for_loop_unhappy_path": {},
+    "rules_not_in_stories": [
+      "predicting default action with intent restart",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}, {\"prev_action\": {\"action_name\": \"utter_iamabot\"}, \"user\": {\"intent\": \"bot_challenge\"}}]",
+      "predicting default action with intent session_start",
+      "predicting default action with intent back"
+    ]
+  }
+}
