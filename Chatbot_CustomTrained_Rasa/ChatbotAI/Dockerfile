@@ -15,7 +15,5 @@ RUN rasa train nlu
 
 USER 1001
 
-ENTRYPOINT ["rasa"]
-
-# Set the command to run your start_services.sh script
-CMD ["run", "--enable-api", "--port", "8080"]
+# Set the command to run your Rasa server with CORS
+CMD ["run", "--enable-api", "--port", "8080", "--cors", "*"]
