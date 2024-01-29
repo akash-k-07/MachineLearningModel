@@ -1,4 +1,3 @@
-# Use Ubuntu 18.04 as the base image
 FROM ubuntu:18.04
 
 # Set the working directory in the container
@@ -18,3 +17,4 @@ RUN chmod +x /app/start_services.sh
 
 # Set the command to run your start_services.sh script
 CMD ["/app/start_services.sh"]
+
