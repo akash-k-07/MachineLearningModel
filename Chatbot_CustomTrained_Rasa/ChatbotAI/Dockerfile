@@ -1,5 +1,5 @@
-# Use a Python base image
-FROM python:3.8
+# Use Ubuntu 18.04 as the base image
+FROM ubuntu:18.04
 
 # Set the working directory in the container
 WORKDIR /app
