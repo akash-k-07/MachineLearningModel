@@ -16,4 +16,4 @@ RUN rasa train nlu
 USER 1001
 
 # Set the command to run your Rasa server with CORS
-CMD ["run", "--enable-api", "--port", "8080", "--cors", "*"]
+CMD ["run", "--enable-api", "--port", "8080"]
