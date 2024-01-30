@@ -1,31 +1,72 @@
 version: "3.1"
 
 rules:
+- rule: Respond to FAQ about quiz prizes
+  steps:
+  - intent: faq_quiz_prizes
+  - action: utter_faq_quiz_prizes
 
-- rule: Say goodbye anytime the user says goodbye
+- rule: Respond to FAQ about technical requirements
+  steps:
+  - intent: faq_technical_requirements
+  - action: utter_faq_technical_requirements
+
+- rule: Respond to FAQ about participant registration
+  steps:
+  - intent: faq_participant_registration
+  - action: utter_faq_participant_registration
+
+- rule: Respond to FAQ about participant cancellation
+  steps:
+  - intent: faq_participant_cancellation
+  - action: utter_faq_participant_cancellation
+
+- rule: Respond to FAQ about quiz categories
+  steps:
+  - intent: faq_quiz_categories
+  - action: utter_faq_quiz_categories
+
+- rule: Respond to FAQ about quiz duration
+  steps:
+  - intent: faq_quiz_duration
+  - action: utter_faq_quiz_duration
+
+- rule: Respond to FAQ about results announcement
+  steps:
+  - intent: faq_results_announcement
+  - action: utter_faq_results_announcement
+
+- rule: Respond to FAQ about feedback submission
+  steps:
+  - intent: faq_feedback_submission
+  - action: utter_faq_feedback_submission
+
+- rule: Greet the user
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: Bid farewell to the user
   steps:
   - intent: goodbye
   - action: utter_goodbye
 
-- rule: Say 'I am a bot' anytime the user challenges
+- rule: Confirm affirmative response
   steps:
-  - intent: bot_challenge
-  - action: utter_iamabot
-  
-- rule: respond to FAQs
-  steps:
-  - intent: customer_support
-  - action: action_customer_support
-  - action: utter_confirmation
+  - intent: affirm
+  - action: utter_affirm
 
-- rule: provide Salesforce information
+- rule: Confirm negative response
   steps:
-  - intent: salesforce
-  - action: action_salesforce
-  - action: utter_confirmation
+  - intent: deny
+  - action: utter_deny
 
-- rule: schedule HR meeting
+- rule: Express gratitude
   steps:
-  - intent: hr_scheduling
-  - action: action_hr_scheduling
-  - action: utter_confirmation
+  - intent: thanks
+  - action: utter_thanks
+
+- rule: Request assistance
+  steps:
+  - intent: help
+  - action: utter_help

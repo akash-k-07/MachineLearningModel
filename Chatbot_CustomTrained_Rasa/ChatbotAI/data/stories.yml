@@ -1,54 +1,78 @@
 version: "3.1"
 
+
 stories:
+- story: User asks about quiz prizes
+  steps:
+  - intent: faq_quiz_prizes
+  - action: utter_faq_quiz_prizes
 
-- story: happy path 1
+- story: User asks about technical requirements
+  steps:
+  - intent: faq_technical_requirements
+  - action: utter_faq_technical_requirements
+
+- story: User asks about participant registration
+  steps:
+  - intent: faq_participant_registration
+  - action: utter_faq_participant_registration
+
+- story: User asks about participant cancellation
+  steps:
+  - intent: faq_participant_cancellation
+  - action: utter_faq_participant_cancellation
+
+- story: User asks about quiz categories
+  steps:
+  - intent: faq_quiz_categories
+  - action: utter_faq_quiz_categories
+
+- story: User asks about quiz duration
+  steps:
+  - intent: faq_quiz_duration
+  - action: utter_faq_quiz_duration
+
+- story: User asks about results announcement
+  steps:
+  - intent: faq_results_announcement
+  - action: utter_faq_results_announcement
+
+- story: User asks about feedback submission
+  steps:
+  - intent: faq_feedback_submission
+  - action: utter_faq_feedback_submission
+
+- story: User greets the bot
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
 
-- story: sad path 1
+- story: User says goodbye
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
-
-- story: sad path 2
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_goodbye
-
-- story: happy path 2
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: customer_support
-  - action: action_customer_support
-  - action: utter_confirmation
-  - intent: salesforce
-  - action: action_salesforce
-  - action: utter_confirmation
-  - intent: hr_scheduling
-  - action: action_hr_scheduling
-  - action: utter_confirmation
-
-- story: sad path - customer_support
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: customer_support
-  - action: action_customer_support
-  - action: utter_confirmation
   - intent: goodbye
   - action: utter_goodbye
+
+- story: User confirms with "yes"
+  steps:
+  - intent: affirm
+  - action: utter_affirm
+
+- story: User denies with "no"
+  steps:
+  - intent: deny
+  - action: utter_deny
+
+- story: User expresses thanks
+  steps:
+  - intent: thanks
+  - action: utter_thanks
+
+- story: User asks for help
+  steps:
+  - intent: help
+  - action: utter_help
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet

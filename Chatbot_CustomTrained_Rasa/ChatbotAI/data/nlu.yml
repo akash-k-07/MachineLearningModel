@@ -1,112 +1,79 @@
 version: "3.1"
-
 nlu:
+- intent: faq_quiz_prizes
+  examples: |
+    - What are the prizes for the quiz?
+    - Can you tell me about the quiz rewards?
+    - Inform me about the prizes offered in the quiz.
+- intent: faq_technical_requirements
+  examples: |
+    - What are the technical requirements for the quiz?
+    - Tell me about the system specifications needed for the quiz.
+    - What do I need to participate from a technical standpoint?
+- intent: faq_participant_registration
+  examples: |
+    - How can I register for the quiz?
+    - Tell me the process of participant registration.
+    - What are the steps to sign up for the quiz?
+- intent: faq_participant_cancellation
+  examples: |
+    - Can I cancel my participation in the quiz?
+    - Tell me about the process of canceling quiz registration.
+    - What should I do if I want to withdraw from the quiz?
+- intent: faq_quiz_categories
+  examples: |
+    - What categories are covered in the quiz?
+    - Tell me about the different quiz topics or sections.
+    - What subjects should I prepare for in the quiz?
+- intent: faq_quiz_duration
+  examples: |
+    - How long does the quiz last?
+    - Tell me the duration of the quiz.
+    - What is the time frame for the quiz?
+- intent: faq_results_announcement
+  examples: |
+    - When will the quiz results be announced?
+    - Tell me about the announcement schedule for quiz results.
+    - When can participants expect to know the quiz outcomes?
+- intent: faq_feedback_submission
+  examples: |
+    - How can I provide feedback for the quiz?
+    - Tell me about the process of submitting feedback.
+    - Is there a way to share my thoughts on the quiz experience?
 - intent: greet
   examples: |
-    - hey
-    - hello
+    - Hi
+    - Hello
+    - Hey
+    - Greetings
     - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
-
 - intent: goodbye
   examples: |
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
-
+    - Goodbye
+    - Farewell
+    - Bye
+    - See you later
 - intent: affirm
   examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
-
+    - Yes
+    - Indeed
+    - That's right
+    - Absolutely
 - intent: deny
   examples: |
-    - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
-
-- intent: mood_great
+    - No
+    - Not really
+    - I disagree
+    - Certainly not
+- intent: thanks
   examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
-
-- intent: mood_unhappy
+    - Thank you
+    - Thanks a lot
+    - Thanks!
+    - Appreciate it
+- intent: help
   examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremely sad
-    - so saad
-    - so sad
-
-- intent: bot_challenge
-  examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
-
-- intent: customer_support
-  examples: |
-    - Can you help me with a customer support issue?
-    - I have a problem with my order
-
-- intent: salesforce
-  examples: |
-    - Tell me about Salesforce development
-    - How can I integrate with Salesforce?
-
-- intent: hr_scheduling
-  examples: |
-    - How can I schedule a meeting with HR?
-    - I have a grievance to discuss with HR
-
-- regex: service_type
-  examples: |
-    - customer support
-    - Salesforce
-    - HR scheduling
+    - Can you help me?
+    - I need assistance
+    - Help!
+    - I'm confused, help

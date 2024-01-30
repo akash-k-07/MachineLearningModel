@@ -1,44 +1,75 @@
-version: "3.1"
-
+version: '3.1'
 intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
-  - customer_support
-  - salesforce
-  - hr_scheduling
+- affirm
+- deny
+- faq_feedback_submission
+- faq_participant_cancellation
+- faq_participant_registration
+- faq_quiz_categories
+- faq_quiz_duration
+- faq_quiz_prizes
+- faq_results_announcement
+- faq_technical_requirements
+- goodbye
+- greet
+- help
+- thanks
 
 responses:
+  utter_faq_quiz_prizes:
+  - text: |
+      The prizes for the quiz include...
+  utter_faq_technical_requirements:
+  - text: |
+      To participate in the quiz, ensure that your system meets the following requirements...
+  utter_faq_participant_registration:
+  - text: |
+      To register for the quiz, follow these simple steps...
+  utter_faq_participant_cancellation:
+  - text: |
+      If you wish to cancel your participation in the quiz, please follow these steps...
+  utter_faq_quiz_categories:
+  - text: |
+      The quiz covers various categories, including...
+  utter_faq_quiz_duration:
+  - text: |
+      The quiz is expected to last for...
+  utter_faq_results_announcement:
+  - text: |
+      The announcement of quiz results is scheduled for...
+  utter_faq_feedback_submission:
+  - text: |
+      To submit feedback for the quiz, follow these steps...
   utter_greet:
-    - text: "Hey! How are you?"
-
-  utter_confirmation:
-    - text: "Sure, I can help you with that."
-
+  - text: |
+      Hello! How can I assist you today?
   utter_goodbye:
-    - text: "Goodbye! If you have any more questions, feel free to ask."
-
-  utter_iamabot:
-    - text: "I am a bot, powered by Rasa."
-
-  utter_cheer_up:
-    - text: "Here is something to cheer you up:"
-      image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-    - text: "Did that help you?"
-
-  utter_happy:
-    - text: "Great, carry on!"
+  - text: |
+      Goodbye! If you have more questions, feel free to return.
+  utter_affirm:
+  - text: |
+      Great to hear! If you have more inquiries, feel free to let me know.
+  utter_deny:
+  - text: |
+      Understood. If you change your mind or have other questions, I'm here to help.
+  utter_thanks:
+  - text: |
+      You're welcome! If there's anything else I can assist you with, feel free to ask.
+  utter_help:
+  - text: |
+      Of course! I'm here to help. What do you need assistance with?
 
 actions:
-  - action_customer_support
-  - action_salesforce
-  - action_hr_scheduling
+  - action_faq_quiz_prizes
+  - action_faq_technical_requirements
+  - action_faq_participant_registration
+  - action_faq_participant_cancellation
+  - action_faq_quiz_categories
+  - action_faq_quiz_duration
+  - action_faq_results_announcement
+  - action_faq_feedback_submission
+  - action_greet
+  - action_default_fallback
 
 session_config:
   session_expiration_time: 60
